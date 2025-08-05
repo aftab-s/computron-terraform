@@ -111,5 +111,3 @@ terraform console   # Test functions interactively
 ---
 
 **Welcome to your Terraform learning journey! 🚀**
-
-*Part of the Computron Training Series - Empowering developers with Infrastructure as Code*
