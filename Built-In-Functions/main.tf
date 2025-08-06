@@ -41,7 +41,7 @@ locals {
   server_tags = {
     for server_type in local.server_types :
     server_type => {
-      Name        = "${server_type}-${local.environment}"
+      Name        = "${local.server_type[0]}-${local.environment}"
       Type        = server_type
       Environment = local.environment
       CreatedAt   = local.formatted_date
