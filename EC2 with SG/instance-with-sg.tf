@@ -41,6 +41,8 @@ resource "aws_security_group" "web_sg" {
   tags = {
     Name = "${var.instance_name}-sg"
   }
+
+  depends_on = [ aws_key_pair.web_server_key ] # Explicit Dependency
 }
 
 # Create EC2 Instance
@@ -48,7 +50,9 @@ resource "aws_instance" "web_server" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   key_name              = aws_key_pair.web_server_key.key_name
-  vpc_security_group_ids = [aws_security_group.web_sg.id]
+  vpc_security_group_ids = [aws_security_group.web_sg.id] 
+
+  # depends_on = [ aws_security_group.web_sg ] Explicit Dependency
 
   # User data script to install and start Apache
   user_data = <<-EOF
