@@ -1,0 +1,5 @@
+ami_id        = "ami-08a6efd148b1f7504"
+instance_type = "t2.micro"
+instance_name = "MyEC2Instance"
+environment   = "development"
+project_name  = "terraform-ec2-module"

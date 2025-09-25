@@ -1,0 +1,54 @@
+=== TERRAFORM BUILT-IN FUNCTIONS DEMONSTRATION ===
+
+Project: ${project_name}
+Environment: ${environment}
+Full Name: ${full_name}
+Uppercase: ${uppercase_name}
+Generated on: ${formatted_date} at ${formatdate("hh:mm:ss", current_time)}
+
+=== STRING FUNCTIONS ===
+Original: "${project_name}"
+Length: ${length(project_name)}
+Title Case: ${title(project_name)}
+Substring (first 4 chars): ${substr(project_name, 0, 4)}
+
+=== LIST FUNCTIONS ===
+Server Types: ${join(", ", server_types)}
+Count: ${server_count}
+First Server: ${server_types[0]}
+Last Server: ${server_types[length(server_types) - 1]}
+
+=== MAP FUNCTIONS ===
+Server Configurations:
+%{ for k, v in server_configs ~}
+- ${k}: ${v}
+%{ endfor ~}
+
+=== NUMERIC FUNCTIONS ===
+Port Range: ${join(", ", formatlist("%d", port_range))}
+
+=== CONDITIONAL LOGIC ===
+Recommended Instance Type: ${instance_type}
+%{ if instance_type == "t3.large" ~}
+(Production-grade instance selected)
+%{ else ~}
+(Development instance selected)
+%{ endif ~}
+
+=== NETWORK FUNCTIONS ===
+Subnet CIDRs:
+%{ for cidr in subnet_cidrs ~}
+- ${cidr}
+%{ endfor ~}
+
+=== ENCODING FUNCTIONS ===
+Original: "Hello, Terraform!"
+Base64 Encoded: ${encoded_data}
+Base64 Decoded: ${base64decode(encoded_data)}
+
+=== TEMPLATE FUNCTIONS ===
+This file was generated using the templatefile() function!
+Template location: demo-template.tftpl
+Generated at: ${current_time}
+
+=== END OF DEMONSTRATION ===
