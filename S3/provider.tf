@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   region  = var.aws_region
-  profile = "bagel-acc"
+  profile = "Aftab-Account"
 
   default_tags {
     tags = {
