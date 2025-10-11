@@ -78,7 +78,7 @@ The configuration provides useful outputs:
 ## 🔧 Customization
 
 To customize the S3 bucket:
-1. Edit `terraform.tfvars` with your values
+1. Edit `terraform.tfvars` with your values so that you have the name you prefer
 2. Add additional bucket features as required
 
 This example demonstrates S3 bucket provisioning with Terraform.
