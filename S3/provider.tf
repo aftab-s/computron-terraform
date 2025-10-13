@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   region  = var.aws_region
-  profile = "Aftab-Account"
+  profile = "008971661427_AdministratorAccess"
 
   default_tags {
     tags = {
