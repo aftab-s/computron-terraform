@@ -11,7 +11,7 @@ terraform {
 
 provider "aws" {
   region  = "us-east-1"
-  profile = "315293714260_DevOps-Engineer-I"
+  profile = "Aftab-Account"
 
   default_tags {
     tags = {
