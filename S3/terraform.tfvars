@@ -1,10 +1,10 @@
 # S3 Bucket Configuration
-bucket_name = "bagel-s3-demo"
+bucket_name = "bagel-s3-full-run-demo"
 aws_region  = "us-east-1"
 
 # Project Settings
 environment  = "development"
-project_name = "bagel-s3-demo"
+project_name = "bagel-s3-full-run-demo"
 
 # S3 Bucket Features
 enable_versioning     = false
