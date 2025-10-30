@@ -1,5 +1,5 @@
 # S3 Bucket Configuration
-bucket_name = "bagel-s3-full-run-demo"
+bucket_name = "bagel-s3-demo"
 aws_region  = "us-east-1"
 
 # Project Settings
